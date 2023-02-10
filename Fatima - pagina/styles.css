@@ -1,0 +1,305 @@
+@font-face {
+    font-family: titulo;
+    src: url(img/BerkshireSwash-Regular.ttf);
+}
+
+@font-face {
+    font-family: sub-titulo;
+    src: url(img/Dosis-Bold.ttf);
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Dosis:wght@500&family=Fascinate+Inline&family=Itim&display=swap');
+
+
+h2, li, h3 {
+    font-family: sub-titulo;
+}
+
+*{
+    box-sizing: border-box;
+    user-select: none;
+}
+
+body {
+    margin: 0;
+    background-image: url(https://fondosmil.com/fondo/28064.jpg);
+    background-size: cover;
+    font-size: 16px;
+    overflow-x: hidden;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    height: auto;
+    margin: 0 auto;
+}
+
+/* HEADER */
+
+
+.header-icono {
+    margin: 1.5em 0  1.5em 3em;
+    height: 8em;
+    width: 8em;
+}
+
+.grid h1 {
+    color: white;
+    font-size: 6rem;
+    font-family: titulo;
+    text-align: center;
+    margin-top: .5em;
+    grid-column: 8/12;
+    grid-row: 1/2;
+    cursor:default;
+}
+
+.grid nav {
+    background-color: whitesmoke ;
+    color: black;
+    grid-column: 1/13;
+    font-size: 1.2em;
+    margin-bottom: 2em;
+}
+    .nav-menu {
+        display: flex;
+        justify-content: space-around;
+    }
+        .nav-menu li {
+            cursor: pointer;
+            transition: .3;
+        }
+        .nav-menu li:hover {
+            color: rgb(204, 25, 204);
+        }
+
+/* MAIN */
+
+.main-novedades {
+    color: black;
+    border-radius: 15px;
+    margin-top: 3em;
+    grid-column: 3/11;
+    background-color: whitesmoke;
+    height: 42em;
+}
+    .main-novedades h2 {
+        font-size: 3.5em;
+        text-align: center;
+        margin-bottom: 8rem;
+    }
+    .main-novedades-carrousel {
+        margin-top: -4em;
+        min-height: 30em;
+    }
+        .novedades-carrousel-img {
+            min-height: 30em;
+            min-width: 30em;
+            background-image: url(img/libro.png);
+            background-size: cover;
+        }
+
+
+.main-explosion {
+    grid-column: 1/13;
+    /* background-color: aquamarine; */
+    text-align: center;
+    margin: 2em 0;
+}
+    .main-explosion p {
+        font-size: 5em;
+        background-color: whitesmoke;
+        color: black;
+    }
+
+.main-buscados {
+    grid-column: 1/13;
+    width: 75%;
+    margin: 0 auto;
+    /* background-color: aqua; */
+}
+    .main-buscados h2 {
+        font-size: 3em;
+        text-align: center;
+    }
+    .main-buscados-img {
+        text-align: center;
+        /* background-color: aquamarine; */
+        margin: 1em;
+    }
+        .main-buscados img {
+            width: 15%;
+            height: 8%;
+        }
+
+.main-carrousel {
+    grid-column: 3/11;
+    width: 300%;
+    background-color: whitesmoke;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    padding: 0 2em;
+        /* Animacion */
+    animation-name: cambiarImagen;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+    .main-carrousel-img {
+        width: calc(100% / 3);
+        border-radius: 5em;
+        height: 20rem;
+        font-family: titulo;
+        text-align: center;
+        padding-top: 5rem;
+        font-size: 5em;
+    }
+    .carrousel-relleno {
+        grid-column: 1/3;
+        grid-row: 5/6;
+        margin: 0 -2em -.5em;
+        background-color: #9a4b8c;
+        z-index: 5;
+    }
+    .carrousel-relleno-2 {
+        grid-column: 11/13;
+        grid-row: 5/6;
+        margin: 0 0 -.5em -2em;
+        background-color: #9a4b8c;
+        z-index: 5;
+    }
+    
+    @keyframes cambiarImagen {
+        0% {
+            transform: translateX(0%);
+        }
+        50% {
+            transform: translateX(-33.6%);
+        }
+        100% {
+            transform: translate(-66.3%);
+        }
+    }
+
+
+/* FOOTER */
+
+.footer-textos {
+    font-size: 2em;
+    grid-column: 1/13;
+    background-color: whitesmoke;
+    color: black;
+    height: 15rem;
+    text-align: center;
+    padding-top: 2.5rem;
+    margin-top: 4em;
+}
+    .footer-textos img {
+        width: 3rem;
+        height: 3rem;
+        margin-right: .5rem;
+    }
+
+.ocultar-2 {
+    display: none;
+}
+/* Un color bueno: rgb(222, 222, 222) */
+
+
+/* RESPONSIVE */
+
+@media screen and (max-width: 500px) {
+    body {
+        background-color: #9a4b8c;
+        background-image: none;
+        font-size: 10px;
+    }
+    .grid {
+        width: auto;
+    }
+    .grid h1 {
+        font-size: 3rem;
+        grid-column: 2/13;
+    }
+    .header-icono {
+        height: 6em;
+        width: 6em;
+    }
+    .nav-menu {
+        font-size: .7em;
+        height: auto;
+    }
+
+        /* MAIN */
+    .main-novedades {
+    grid-column: 2/12;
+    height: auto;
+    }
+    .main-novedades-carrousel {
+        margin-top: -15em;
+        margin-bottom: -4em;
+    }
+
+    .main-explosion {
+        font-size: .6em;
+    }
+
+    .main-buscados {
+        width: auto;
+    }
+    .main-buscados img {
+        width: 9em;
+        height: 5em;
+    }
+    .ocultar {
+        display: none;
+    }
+
+    /* ACA ESTA EL PROBLEMAAA */
+    .main-carrousel {
+        grid-column: 1/13;
+        display: block;
+        animation-name: none;
+        width: 100%;
+    }
+    .main-carrousel-img {
+        display: block;
+        border-radius: 0;
+        width: 100%;
+    }
+    .icono-2 {
+        font-size: 10em;
+        margin: -1em 0;
+        text-align: center;
+        display: block;
+        width: 100%;
+    }
+}
+
+/* 
+.main-carrousel {
+    grid-column: 3/11;
+    width: 300%;
+    background-color: whitesmoke;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    padding: 0 2em;
+            Animacion
+        animation-name: cambiarImagen;
+        animation-duration: 8s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+    }
+        .main-carrousel-img {
+            width: calc(100% / 3);
+            border-radius: 5em;
+            height: 20rem;
+            font-family: titulo;
+            text-align: center;
+            padding-top: 5rem;
+            font-size: 5em;
+        } 
+*/

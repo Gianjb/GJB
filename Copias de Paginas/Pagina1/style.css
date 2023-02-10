@@ -1,0 +1,120 @@
+body {
+    background-color: #FFF;
+    display: grid;
+    grid-template-areas:'header header'
+                        'main main'
+                        'footer footer';
+    grid-template-rows: 14em 100em 5em;
+    font-size: 16px;
+    margin: 0;
+}
+
+header {
+    grid-area: header;
+}
+
+header h1 {
+    float: left;
+}
+
+nav {
+    width: 70%;
+    margin: 2em auto 0;
+    border-top: 1px solid black;
+    height: 7em;
+}
+
+.menu-1 li {
+    font-size: 1.5em;
+    float: right;
+    list-style: none;
+    margin: 0 3rem;
+    font-family: "A2-FB-Regular",sans-serif;
+}
+
+
+
+
+
+main {
+    grid-area: main;
+}
+
+/* CARROUSEL */ 
+
+.carrousel {
+    width: 400%;
+    height: 44em;
+    display: flex;
+    /* flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center; */
+    /* ANIMACION */
+    animation-name: moverImagenes;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-direction:alternate;
+}
+
+.imagen-1 {
+    height: 44em;
+    width: calc(100% / 4);
+    background-image: url(img/imagen1.jpg);
+    background-size: cover;
+    background-position: 0 50em;
+}
+
+.imagen-2 {
+    height: 44em;
+    width: calc(100% / 4);
+    background-image: url(img/imagen2.jpg);
+    background-size: cover;
+}
+
+.imagen-3 {
+    height: 44em;
+    width: calc(100% / 4);
+    background-image: url(img/imagen3.jpg);
+    background-size: cover;
+}
+
+.imagen-4 {
+    height: 44em;
+    width: calc(100% / 4);
+    background-image: url(img/imagen4.jpg);
+    background-size: cover;
+}
+
+@keyframes moverImagenes {
+    0% {
+        transform: translateX(0%);
+    }
+    15% {
+        transform: translateX(0%);
+    }
+    30% {
+        transform: translateX(-25%);
+    }
+    45% {
+        transform: translateX(-25%);
+    }
+    60% {
+        transform: translateX(-50%);
+    }
+    75% {
+        transform: translateX(-50%);
+    }
+    90% {
+        transform: translateX(-75%);
+    }
+    100% {
+        transform: translateX(-75%);
+    }
+}
+
+
+
+footer {
+    grid-area: footer;
+    outline: 1px solid black;
+}

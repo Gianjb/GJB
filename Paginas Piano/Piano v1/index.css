@@ -1,0 +1,113 @@
+@font-face {
+    font-family: oswald;
+    src: url(img/Oswald-VariableFont_wght.ttf);
+}
+
+.todo {
+    /*display: flex; REVISAR*/
+    display:contents;
+    flex-basis: 100%;
+
+}
+
+body {
+    background-color: rgb(27, 27, 27);
+    color: white;
+    font-family: oswald;
+    flex-basis: 0;
+    flex-grow: 0;
+    padding: 0 15%;
+    /*
+    background-image: url(img/partituras.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;*/
+}
+
+header{
+    background-color: rgb(52, 52, 52);
+    text-align: left;
+    line-height: 1.5em;
+    width: 100%;
+    height: 11em;
+    padding-top: 12px;
+    margin-top: 20px;
+    /*background-image: url(img/notas-sueltass.png);
+    background-position: center;*/
+}
+
+.titulo {
+    display: inline-block;
+    text-decoration: underline;
+    padding-top: 0.2em;
+    margin-left: 100px;
+    font-size:x-large;
+}
+
+nav{
+    width:max-content;
+    height: 100%;
+    width: 100%;
+}
+
+.nav__indice {
+    display: inline-block;
+    font-size: 1.2em;
+}
+
+.nav__indice--1{ /*Se hace el rebelde, no queda con los demas...*/
+    background-color: rgb(52, 52, 52);
+    border-radius: 1em;
+    padding: 2em;
+    transition: border .3s;
+    display: inline-block;
+}
+
+.nav__indice--2, .nav__indice--3, .nav__indice--4, .nav__indice--5, .nav__indice--6 {
+    background-color: rgb(52, 52, 52);
+    border-radius: 1em;
+    padding: 2em;
+    width: 5em;
+    transition: border .3s;
+    display: inline-block;
+    text-align: center;
+}
+
+.nav__indice--1:hover, .nav__indice--2:hover, .nav__indice--3:hover, .nav__indice--4:hover, .nav__indice--5:hover, .nav__indice--6:hover{
+    border: 3px solid white;
+}
+
+.nav-aside {
+    height: 25em;
+    width: 100%;
+}
+
+
+aside{
+    width: 16em;
+    float: right;
+    height: 95%;
+}
+
+.aside__imagen {
+    width: 100%;
+    height: 100%;
+}
+
+article{
+    width: 100%;
+    height: max-content;
+}
+
+footer{
+    border: 5px solid black;
+    height: 5%;
+}
+
+.partitura {
+    width: 1px;
+    height: 1px;
+    float: left;
+}
+
+

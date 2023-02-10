@@ -1,0 +1,222 @@
+@font-face {
+    font-family: principal;
+    src: url(img/AnnieUseYourTelescope-Regular.ttf);
+}
+
+
+body {
+    display: grid;
+    grid-template-areas:'header header'
+                        'main main'
+                        /* 'secundario secundario' */
+                        'footer footer';
+    grid-template-rows: 8em 140em 15em;
+    overflow-x: hidden;
+    color: rgb(197, 197, 197);
+    cursor: default; /* para cambiar el cursor*/
+    user-select: none; /*para copiar/no-copiar texto*/
+}
+
+.imagen {
+    background-color: grey;
+    position: absolute;
+    background-size: cover;
+    width: 100%;
+    height: 70em;
+    object-fit: cover;
+    filter: brightness(.7);
+}
+
+
+/* ---------------AREA 1-------------- */
+header {
+    grid-area: header;
+    z-index: 2;
+    background-color: rgba(46, 45, 45, 0.2);
+    color: white;
+}
+
+.logo {
+    float: left;
+    width: 3.5em;
+    margin: 1em 5em 0 5em;
+}
+
+.menu-1 li{
+    display: inline-block;
+    padding: 3.2rem 3.5rem;
+    font-size: 1.5em;
+    cursor: pointer;
+}
+
+/* .menu-boton {
+    outline: 1px solid black;
+    padding: 0.5em;
+    border-radius: 1em;
+} */
+
+header p {
+    float: right;
+    margin-right: 1rem;
+    font-size: 3em;
+}
+
+/* ---------------AREA 2-------------- */
+
+main {
+    grid-area: main;
+    color: white;
+    z-index: 1;
+    text-align: center;
+}
+
+.principal {
+    height: 55em;
+}
+
+.principal h1 {
+    margin-top: 2rem;
+    font-size: 16em;
+    font-family: principal;
+}
+
+.principal p {
+    font-size: 1.5em;
+    color: white;
+    margin-top: 3rem;
+    line-height: 2rem;
+}
+
+.menu-2 li, .tirar {
+    display: inline-block;
+    font-size: 3em;
+    margin: 5rem 3rem 0 0;
+    background-color: rgba(46, 45, 45, 0.4);
+    padding: .8em .9em;
+    transition: .1;
+    cursor: pointer;
+}
+
+.menu-2 li:hover, .menu-1 li:hover {
+    background-color: rgba(93, 91, 91, 0.4);
+}
+
+/* ---------------AREA 3-------------- */
+
+.secundario {
+    color: black;
+    height: 85em;
+    background-color: rgb(255, 255, 255);
+}
+
+.secundario h1 {
+    font-size: 3em;
+    padding: 3rem 0;
+}
+
+.menu-3 li {
+    display: inline-block;
+    position: relative;
+    width: 30em;
+    height: 32em;
+    margin: 1em;
+    /* background-image: url(img/mipiano.jpg); */
+    /* background-size: 100% 100%; */
+}
+
+.pagina-1 {
+    background-image: url(img/viejaPiano.jpeg);
+    background-size: 100% 100%;
+    /* transition: background-color 3s; */
+    transition: all 1s;
+}
+
+.pagina-1:hover {
+    filter: brightness(2);
+}
+
+.pagina-2:hover, .pagina-3:hover {
+    filter: brightness(1.3);
+}
+
+.pagina-2 {
+    background-image: url(img/partituras.jpg);
+    background-size: 100% 100%;
+    transition: all 1s;
+}
+
+.pagina-3 {
+    background-image: url(img/simpsons.jpg);
+    background-size: 100% 100%;
+    transition: all 1s;
+}
+
+.pagina-4, .pagina-5, .pagina-6 {
+    background-image: url(img/mipiano.jpg);
+    background-size: 100% 100%;
+}
+
+li p {
+    position: absolute;
+    font-size: 2em;
+    background-color: rgba(56, 56, 56, 0.4);
+    border-radius: .2em;
+    color: white;
+    bottom: 3rem;
+    left: 2rem;
+}
+
+/* ---AREA 4--- */
+
+footer {
+    grid-area: footer;
+    background-color: rgb(16, 17, 16);
+    z-index: 10;
+    text-align: center;
+    color: white;
+    font-size: 2em;
+    font-family: 'Courier New', Courier, monospace;
+    padding-top: 6rem;
+}
+
+
+@media screen and (max-width: 415px) {
+    body {
+        font-size: 10px;
+        grid-template-rows: 8em 285em 22em;
+    }
+    
+    .menu-1 li {
+        font-size: 1em;
+        padding: 2.4rem 1.5rem;
+    }
+
+    .ocultar {
+        visibility: hidden;
+    }
+
+    .principal {
+        height: 60em;
+    }
+
+    .principal p {
+        font-size: 1.2em;
+        line-height: 1.1rem;
+    }
+
+    .menu-2 {
+        margin-left: 4em;
+    }
+
+    .menu-2 li {
+        font-size: 3em;
+        margin: 3rem 2rem -1rem 1rem;
+        width: 2.5em;
+        height: 3rem;
+        padding-top: 2.5rem;
+    }
+
+    .menu-3 {
+        width: auto;
+    }
+}
